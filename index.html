@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>待办事项</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1 class="title">待办事项</h1>
+
+    <section class="input-area">
+      <input id="taskInput" type="text" placeholder="输入新任务，按回车或点击添加" />
+      <button id="addBtn" class="btn primary">添加</button>
+    </section>
+
+    <section class="counts">
+      <span id="incompleteCount">未完成：0</span>
+      <span id="completeCount">已完成：0</span>
+    </section>
+
+    <ul id="todoList" class="todo-list"></ul>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
