@@ -8,18 +8,29 @@
 </head>
 <body>
   <main class="app">
-    <h1 class="title">待办事项</h1>
+    <h1 class="title">📝 我的待办清单</h1>
 
     <section class="input-area">
-      <input id="taskInput" type="text" placeholder="输入新任务，按回车或点击添加" />
-      <button id="addBtn" class="btn primary">添加</button>
+      <input id="taskInput" type="text" placeholder="今天要做什么？" />
+      <select id="prioritySelect" class="priority-select">
+        <option value="low">🟢 低</option>
+        <option value="mid" selected>🟡 中</option>
+        <option value="high">🔴 高</option>
+      </select>
+      <button id="addBtn" class="btn primary">➕ 添加任务</button>
     </section>
 
     <section class="counts">
       <span id="incompleteCount">未完成：0</span>
       <span id="completeCount">已完成：0</span>
+      <button id="clearBtn" class="btn secondary">🗑️ 清空已完成</button>
+      <button id="clearAllBtn" class="btn secondary danger">⚠️ 全部清空</button>
     </section>
 
+    <div id="emptyMsg" class="empty-msg">
+      <div class="empty-icon">✨</div>
+      <div class="empty-text">没有任务，放松一下吧！</div>
+    </div>
     <ul id="todoList" class="todo-list"></ul>
   </main>
 
